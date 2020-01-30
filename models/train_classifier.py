@@ -150,7 +150,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
      '''     
     y_pred = model.predict(X_test)
     for category, column_pred, column_test in zip(category_names, y_pred, Y_test.values):
-        return print('classification report for:', category, '\n', classification_report(column_pred, column_test))
+        print('classification report for:', category, '\n', classification_report(column_pred, column_test))
 
 
 def save_model(model, model_filepath):
